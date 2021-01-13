@@ -385,18 +385,97 @@ footer {
 
     .navbar-brand {
         margin: 0;
+        padding: 0 20px;
+    }
+
+    .pic img {
+        padding: 0;
+        margin: 23% 50px;
+    }
+
+    .row p {
+        margin: 0 20px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .featured-icon {
+        margin-bottom: 60px;
+    }
+
+    .row .contact-left {
+        margin: 0 20px;
+    }
+
+    #footer-icon {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    #footer-icon .row {
+        margin: 20px 30% 0px;
+        padding: 0 70px;
+    }
+
+    #footer-icon .row p {
+        margin-bottom: 50px;
+    }
+
+    #contact .container {
+        margin: 20px;
+    }
+
+    #contact .container .row .contact-left {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        width: 600px;
+    }
+
+    .pic img {
+        margin: 30px 100px;
+        padding: 0;
+    }
+
+    .card-deck {
+        margin: 0%;
+        padding: 0px;
+    }
+
+    /* .card-deck .card {
+        width: 300px;
+        height: 300px;
+    } */
+
+    #footer {
+        margin: 0;
+    }
+
+    #footer-icon .row-wrapper .row {
+        margin: 0;
+        padding: 0 140px;
     }
 }
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .column {
         width: 100%;
     }
 
     .navbar-brand {
-        margin: 10px;
+        margin: 20px;
         padding: 0;
+    }
+
+    .navbar {
+        padding: 0;
+        height: 10%;
+        width: 400px;
     }
 
     .navbar-toggler-icon {
@@ -405,7 +484,7 @@ footer {
     }
 
     .pic img {
-        margin: 50px 18%;
+        margin: 20px 10px;
         padding: 0;
     }
 
@@ -426,12 +505,26 @@ footer {
     }
 
     .container .row {
-        margin: 20px;
+        margin: 10px;
     }
 
     #footer-icon {
+        margin: 0;
         padding: 0;
-        margin: 0 22%;
+
+    }
+
+    #footer-top {
+        justify-content: right;
+    }
+
+    #footer-icon .row {
+        margin: 0px 0% 0px;
+        padding: 0 70px;
+    }
+
+    #footer-icon .row p {
+        margin-bottom: 50px;
     }
 
 
