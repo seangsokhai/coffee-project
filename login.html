@@ -6,40 +6,104 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+	 <!-- react -->
+	 <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	 <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<style>
+		.i{
+			font-size: 50px;
+			color: antiquewhite;
+		}
+		body{
+			background-image: url(https://images.unsplash.com/photo-1531265726475-52ad60219627?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80);
+			background-size: cover;
+			color: rgb(235, 235, 235);
+		}
+		input{
+			width:300px;
+			height: 30px;
+			border: none;
+		}
+		input:hover{
+			background-color: rgb(86, 198, 250);
+			color: rgb(0, 0, 0);
+		}
+
+	</style>
 </head>
 <body>
 	
 	<div class="container">
-		<div class="img">
-			<img src="https://www.flaticon.com/svg/vstatic/svg/3234/3234312.svg?token=exp=1611396908~hmac=9187245983c6aaf1db261ce47fc70687">
+		<div class="img"  data-aos="fade-up-right" data-aos-mirror="false">
+			<img src="images/pngtree-cup-of-coffee-png-image_2294664-removebg-preview.png">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
-				<img src="https://www.flaticon.com/svg/vstatic/svg/633/633780.svg?token=exp=1611395664~hmac=6b232647a9461bfa8bcc52e4fe1b8088">
-				<h2 class="title">Welcome</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
-            	   </div>
-            	</div>
-            	<a href="#">Forgot Password?</a>
-            	<input type="submit" class="btn" value="Login">
-            </form>
+			<form action="index.html"  data-aos="fade-up-left" data-aos-mirror="false">
+				<!-- <h2 class="title">Welcome</h2> -->
+           		
+				<div class="i">
+					<i class="fas fa-user"></i>
+				</div>
+				<div id="mydiv"></div>
         </div>
-    </div>
-    <script type="text/javascript" src="js/main.js"></script>
+	</div>
+	<script type="text/babel">
+		class MyForm extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  username: '',
+			  age: null,
+			};
+		  }
+		  mySubmitHandler = (event) => {
+			event.preventDefault();
+			let age = this.state.age;
+			if (!Number(age)) {
+			  alert("Your pass must be a number");
+			}
+		  }
+		  myChangeHandler = (event) => {
+			let nam = event.target.name;
+			let val = event.target.value;
+			this.setState({[nam]: val});
+		  }
+		  render() {
+			return (
+			  <form onSubmit={this.mySubmitHandler}>
+			  <h1>Hello {this.state.username} </h1>
+			  <p>Enter your email:</p>
+			  <input
+				type='email'
+				name='username'
+				onChange={this.myChangeHandler}
+			  />
+			  <p>Enter your password:</p>
+			  <input
+				type='password'
+				name='age'
+				onChange={this.myChangeHandler}
+			  />
+			  <br/>
+			  <br/>
+			  <input type='submit' />
+			  </form>
+			);
+		  }
+		}
+		
+		ReactDOM.render(<MyForm />, document.getElementById('mydiv'));
+	  </script>
+
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+		duration: 2000,
+		});
+	</script>
 </body>
 </html>

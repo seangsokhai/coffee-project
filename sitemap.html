@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/737244f07a.js" crossorigin="anonymous"></script>
     <title>coffe shop</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -73,13 +74,13 @@
   </div>
 
 
-    <section id="site-map">  
+    <section id="site-map" data-aos="zoom-out-left" data-aos-mirror="false">  
         <h1>SITE MAP</h1> <br>
         <!-- 1 -->
         
         <h5>HOME</h5>
         <hr>
-        <div class="container">
+        <div class="container"  >
             <div class="row">
                 <div class="part col-md-4">
                     <ul class="ul-sitemap">
@@ -292,6 +293,11 @@
       </div>
 
   </footer>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init({
+      duration: 2000,
+      });
+  </script>
 </body>
 </html>
